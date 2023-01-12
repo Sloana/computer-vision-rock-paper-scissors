@@ -18,6 +18,7 @@ get_computer_choice() randomly select an option between elements of the list rsp
 get_user_choice() get an input from user which should be one of the options "Rock", "Paper", and "Scissors".
 get_winner() is the function that determines which is the winner computer or user. If the winner is computer, then the output is “You lost!”, or if the winner is the user then the output is “you won!”, otherwise, the output is “It is a tie!”.
 
+![image](https://user-images.githubusercontent.com/24815950/212178929-6d8179cc-e131-4fa5-8427-6ea9b13fd93c.png)
 
 For more information how the “Rock”, “Paper”, “Scissors” works, it is described as follow based on https://en.wikipedia.org/wiki/Rock_paper_scissors:
  A player who decides to play rock will beat another player who has chosen scissors ("rock crushes scissors"), but will lose to one who has played paper ("paper covers rock"); a play of paper will lose to a play of scissors ("scissors cuts paper"). If both players choose the same shape, the game is tied and is usually immediately replayed to break the tie.
