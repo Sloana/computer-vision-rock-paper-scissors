@@ -8,6 +8,7 @@ For each class the camera of the computer has been used to makes around 100 imag
 Needs to be said that background information is presents in the images, and it is expected that it may have a high impact on the model accuracy.
 All photos have been taken using different angles and positions of my hand. 
 After that, the model has been trained and exported.
+##Functions
 There are build four functions:
 1.	get_computer_choice()
 2.	get_user_choice()
