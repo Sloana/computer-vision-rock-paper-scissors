@@ -61,14 +61,15 @@ def get_winner():
             winner="user"
         else:
              winner="tied"
-            
-    if winner=="user":
-        print("You won!")
-    elif winner=="computer":
-        print("You lost!")
-    else:
-        print("It is a tie!")
-    return winner
+        return winner
+    def winner():
+        if winner=="user":
+            print("You won!")
+        elif winner=="computer":
+            print("You lost!")
+        else:
+            print("It is a tie!")
+    
 
 
 # get_winner()
@@ -76,14 +77,12 @@ computer_wins=0
 user_wins=0
 
 rounds_played=0
-
 while True:
-    rounds_played+=1
+    if rounds_played<=5 or (computer_wins<=3 and user_wins<=3):
 
-    if get_winner()=="computer":
-        computer_wins+=1
-    elif get_winner()=="user":
-        user_wins+=1
-    if computer_wins==3 or user_wins==3 or rounds_played==5 :
+        if get_winner()=="computer":
+            computer_wins+=1
+        elif get_winner()=="user":
+            user_wins+=1
+        rounds_played+=1
         break
-
