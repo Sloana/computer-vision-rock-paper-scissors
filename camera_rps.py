@@ -37,9 +37,11 @@ def get_computer_choice():
 def get_user_choice():
     user_choice=input("Enter a choice")
     return user_choice
-def get_winner():
+
+def get_winner(computer_choice,user_choice):
     computer_choice=get_computer_choice()
     user_choice=get_user_choice()
+
     if computer_choice=="Rock":
         if user_choice=="Scissors":
             winner="computer"
@@ -61,15 +63,14 @@ def get_winner():
             winner="user"
         else:
              winner="tied"
-        return winner
-    def winner():
-        if winner=="user":
-            print("You won!")
-        elif winner=="computer":
-            print("You lost!")
-        else:
-            print("It is a tie!")
-    
+       
+    if winner=="user":
+        print("You won!")
+    elif winner=="computer":
+        print("You lost!")
+    else:
+        print("It is a tie!")
+    return winner
 
 
 # get_winner()
@@ -77,12 +78,75 @@ computer_wins=0
 user_wins=0
 
 rounds_played=0
-while True:
-    if rounds_played<=5 or (computer_wins<=3 and user_wins<=3):
 
-        if get_winner()=="computer":
-            computer_wins+=1
-        elif get_winner()=="user":
-            user_wins+=1
-        rounds_played+=1
+while True:
+    rounds_played+=1
+
+    if get_winner(computer_choice,user_choice)=="computer":
+        computer_wins+=1
+    elif get_winner(computer_choice,user_choice)=="user":
+        user_wins+=1
+    if computer_wins==3 or user_wins==3 or rounds_played==5 :
         break
+
+
+    
+
+def get_user_choice():
+    user_choice=input("Enter a choice")
+    return user_choice
+
+def get_winner(computer_choice,user_choice):
+    computer_choice=get_computer_choice()
+    user_choice=get_user_choice()
+
+    if computer_choice=="Rock":
+        if user_choice=="Scissors":
+            winner="computer"
+        elif user_choice=="Paper":
+            winner="user"
+        else:
+            winner="tied"
+    elif computer_choice=="Scissors":
+        if user_choice=="Paper":
+            winner="computer"
+        elif user_choice=="Rock":
+            winner="user"
+        else:
+             winner="tied"
+    elif computer_choice=="Paper":
+        if user_choice=="Rock":
+            winner="computer"
+        elif user_choice=="Scissors":
+            winner="user"
+        else:
+             winner="tied"
+       
+    if winner=="user":
+        print("You won!")
+    elif winner=="computer":
+        print("You lost!")
+    else:
+        print("It is a tie!")
+    return winner
+
+
+# get_winner()
+computer_wins=0
+user_wins=0
+
+rounds_played=0
+
+while True:
+    rounds_played+=1
+
+    if get_winner(computer_choice,user_choice)=="computer":
+        computer_wins+=1
+    elif get_winner(computer_choice,user_choice)=="user":
+        user_wins+=1
+    if computer_wins==3 or user_wins==3 or rounds_played==5 :
+        break
+
+
+    
+
