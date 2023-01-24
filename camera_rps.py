@@ -68,7 +68,7 @@ def get_winner(computer_choice,user_choice):
     if winner=="user":
         print("You won!")
     elif winner=="computer":
-        print("You lost!")
+        print("You lost")
     else:
         print("It is a tie!")
     return winner
