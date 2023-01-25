@@ -37,9 +37,8 @@ def get_computer_choice():
 def get_user_choice():
     user_choice=input("Enter a choice")
     return user_choice
-def get_winner():
-    computer_choice=get_computer_choice()
-    user_choice=get_user_choice()
+def get_winner(computer_choice,user_choice):
+
     if computer_choice=="Rock":
         if user_choice=="Scissors":
             winner="computer"
@@ -75,12 +74,14 @@ computer_wins=0
 user_wins=0
 
 rounds_played=0
+computer_choice=get_computer_choice()
+user_choice=get_user_choice()
 while True:
     if rounds_played<=5 and computer_wins<=3 and user_wins<=3:
 
-        if get_winner()=="computer":
+        if get_winner(computer_choice,user_choice)=="computer":
             computer_wins+=1
-        elif get_winner()=="user":
+        elif get_winner(computer_choice,user_choice)=="user":
             user_wins+=1
         rounds_played+=1
         break
