@@ -38,7 +38,7 @@ def get_winner(computer_choice,user_choice):
              winner="tied"
                
     if winner=="computer":
-        print("You lost!")
+        print("You lost")
     elif winner=="user":
         print("You won!")
     else:
