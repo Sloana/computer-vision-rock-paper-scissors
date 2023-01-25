@@ -21,20 +21,22 @@ def get_winner(computer_choice,user_choice):
             winner="user"
         else:
             winner="tied"
-    elif computer_choice=="Scissors":
-        if user_choice=="Paper":
-            winner="computer"
-        elif user_choice=="Rock":
-            winner="user"
-        else:
-             winner="tied"
-    else:
+    
+    elif computer_choice=="Paper":
         if user_choice=="Rock":
             winner="computer"
         elif user_choice=="Scissors":
             winner="user"
         else:
              winner="tied"
+    else: 
+        if user_choice=="Paper":
+            winner="computer"
+        elif user_choice=="Rock":
+            winner="user"
+        else:
+             winner="tied"
+               
     if winner=="computer":
         print("You lost!")
     elif winner=="user":
