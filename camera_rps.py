@@ -69,19 +69,21 @@ def get_winner(computer_choice,user_choice):
     return winner
 
 
-# get_winner()
-computer_wins=0
-user_wins=0
 
-rounds_played=0
-get_computer_choice=get_computer_choice()
-get_user_choice=get_user_choice()
-while True:
-    if rounds_played<=5 and computer_wins<=3 and user_wins<=3:
+def play():
+    computer_wins=0
+    user_wins=0
 
-        if get_winner(get_computer_choice,get_user_choice)=="computer":
-            computer_wins+=1
-        elif get_winner(get_computer_choice,get_user_choice)=="user":
-            user_wins+=1
-        rounds_played+=1
-        break
+    rounds_played=0
+
+    while True:
+        if rounds_played<=5 and computer_wins<=3 and user_wins<=3:
+
+            if get_winner(get_computer_choice(),get_user_choice())=="computer":
+                computer_wins+=1
+            elif get_winner(get_computer_choice(),get_user_choice())=="user":
+                user_wins+=1
+            rounds_played+=1
+     
+
+play()
