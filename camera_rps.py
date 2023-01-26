@@ -86,7 +86,7 @@ def play():
         elif get_winner(get_computer_choice(),get_user_choice())=="user":
             user_wins+=1
         else:
-            print("none of them win")
+            print("Tied")
 
 play()
 
