@@ -74,8 +74,11 @@ def play():
     user_wins=0
 
     rounds_played=0
-
-    while computer_wins <= 3 or user_wins <= 3:
+    while True:
+        if computer_wins ==3 or user_wins ==3:
+            break
+        elif rounds_played==5:
+            break
         rounds_played+=1
 
         if get_winner(get_computer_choice(),get_user_choice())=="computer":
@@ -84,8 +87,6 @@ def play():
             user_wins+=1
         else:
             print("none of them win")
- 
-     
 
 play()
 
